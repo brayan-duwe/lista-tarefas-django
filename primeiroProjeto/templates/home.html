@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Crie suas Tarefas</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <div>
+        <h1>Bem-vindo!</h1>
+        <p>O que você quer fazer?</p>
+        <div class="home-botoes">
+            <a href="{% url 'tarefas:home' %}" class="botao">Ver tarefas</a>
+            <a href="{% url 'tarefas:adicionar' %}" class="botao">Adicionar tarefas</a>
+        </div>
+    </div>
+    
+</body>
+</html>

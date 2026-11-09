@@ -1,18 +1,22 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Minhas tarefas</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
     <h1>Bem-vindo {{nome}}, aqui estão suas tarefas.</h1>
-    <table border="1">
+    <table>
         <thead>
             <th>Nome</th>
             <th>Descrição</th>
             <th>Situação</th>
             <th>Data de criação</th>
+            <th></th>
+            <th></th>
         </thead>
         <tbody>
             {% for tarefa in tarefas %}
@@ -27,6 +31,6 @@
             {% endfor %}
         </tbody>
     </table>
-    <a href="{% url 'tarefas:adicionar' %}">Adicionar nova tarefa</a>
+    <a class="botao" href="{% url 'tarefas:adicionar' %}">Adicionar nova tarefa</a>
 </body>
 </html>
